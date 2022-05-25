@@ -8,6 +8,6 @@ function datos() {
   }else{
     alert(`Bienvenido: ${nombre} \nGracias por haberte registrado`)
     alert(`Estas siendo redireccionado a nuestra pagina principal`)
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
   }
 }
