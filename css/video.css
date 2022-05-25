@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: transparent;
+    pointer-events: none;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-letra);
+    background-color: #EAEAEA;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-fondo1:#2B353A;
+    --color-letra2:#4a5156;
+    --color-fondo2:#fff;
+    --color-letra:#fff;
+    --color-letra-apagado:#aeb2b4;
+    --color-hover:#01BCF3;
+    --color-espera-azul:#80DDF9;
+    --color-main-naranja: #ff9900;
+    --color-contenedores:#171a1c;
+    --color-contenedores-apagado:#171a1c7a;
+    --color-letra-encendido: #373737 ;
+    --lineal-gradient-facebook:linear-gradient(to bottom,rgba(34,133,187) 50%,
+    rgb(21, 102, 165) 0%);
+    --box-shadow: 0px 2px 25px 4px rgba(40,61,84,0.61);
+    --box-shadow-2:rgba(0, 0, 0, 0.3) 0px 0px 1px 0;
+    --lineal-gradient-contenido:linear-gradient(0deg, rgba(2, 0, 36, 0.705) 0%, rgba(2, 0, 36, 0.149) 20%, rgba(0,212,255,0) 100%);
+    --lineal-gradient-contenido-activado:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+/*header */
+.cabezado{
+    height: 77px;
+    background-color: var(--color-fondo1);
+}
+
+/*ul */
+.cabezado__lista{
+    width: 90%;
+    max-width: 1150px;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/*todos los li*/
+.cabezado__lista__item{
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    color: var(--color-letra-apagado);
+    text-decoration: none;
+}
+
+.cabezado__lista__item:hover{
+    color: var(--color-letra);
+}
+
+/*el li que tiene al logo / logo*/
+.cabezado__lista__item-logo{
+    width: 45%;
+}
+
+.cabezado__lista__hipervinculo{
+    display: block;
+    width: 200px;
+    height: 76px;
+    text-align: right;
+}
+
+.cabezado__lista__logo{
+    width: 150px;
+    height: 100%;
+    object-fit: contain;
+    margin-right:100% ;
+    display: block;
+}
+
+/*la seccion donde se realiza las busquedas*/
+
+.cabezado__lista__formulario{
+    width: 200px;
+    height: 40px;
+    background-color: var(--color-contenedores-apagado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    cursor: default;
+}
+
+.cabezado__lista__formulario:valid{
+    background-color: var(--color-contenedores);
+}
+
+.cabezado__lista__campo{
+    height: 40px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-letra-apagado);
+    font-weight: 500;
+}
+
+.cabezado__lista__boton{
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    color: var(--color-letra);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+
+/*el contenedor del login / login*/
+.cabezado__lista__contenedor{
+    display: flex;
+    width: 90px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-contenedores-apagado);
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cabezado__lista__contenedor:hover{
+    background-color:var(--color-contenedores);
+}
+
+.cabezado__lista__icono{
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.cabezado__lista__session{
+    font-size: .8rem;
+}
+
+/*el icono hacia facebook / hipervinculo facebook*/
+.cabezado__lista__propio{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    background-image: var(--lineal-gradient-facebook);
+    text-decoration: none;
+    color: var(--color-letra);
+}
+
+.cabezado__lista__icono-propio{
+    font-size: 1.5rem;
+}
+
+/*tamaño del cuerpo main*/
+.cuerpo__main{
+    width: 90%;
+    max-width: 1150px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 72% 20px 27%;
+    grid-template-rows: 20px 10vh 80vh ;
+}
+
+/*guia*/
+.guia {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.guia__icon {
+    color: var(--color-hover);
+}
+
+.guia__texto{
+    color: var(--color-letra-apagado);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.guia__texto:hover {
+    color: var(--color-hover);
+}
+
+.guia__icon--arrow {
+    color: var(--color-main-naranja);
+}
+
+/* titulo */
+.titulo{
+    color: var(--color-contenedores);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+
+/* videos */
+.video{
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-column: 1 / 2;
+    grid-row: 3;
+    align-items: flex-start;
+}
+
+.video__opciones{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--color-fondo1);
+    border-radius: 5px;
+    height: 45px;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+}
+
+.video__servers{
+    font-size: 1rem;
+    color: var(--color-letra-apagado);
+    font-weight: 600;
+    height: 100%;
+    line-height: 45px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.video__servers:hover{
+    color: var(--color-letra);
+    border-top: 2px solid var(--color-hover);
+    background-color: var(--color-contenedores);
+}
+
+.video__muestra{
+    border-radius:5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: none;
+}
+
+.noticia {
+    grid-column: 3;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-rows: 30px;
+    grid-auto-rows: 95px;
+    background-color: var(--color-fondo2);
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(--color-letra2);
+    font-weight: 500;
+    padding: 20px 10px ;
+    box-shadow:var(--box-shadow-2) ;
+    gap: 30px;
+}
+
+.noticia__main {
+    display: flex;
+    gap: 10px;
+}
+
+.noticia__contenedor {
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 50%;
+}
+
+.noticia__imagen{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+.noticia__segmento {
+    position: absolute;
+    background-color: var(--color-main-naranja);
+    color: var(--color-letra);
+    font-size: 12px;
+    font-weight: 500;
+    bottom: 0;
+    left: -2px;
+    border-radius: 0 8px 0 0 ;
+    padding: 2px 5px;
+}
+
+.noticia__parrafo {
+    width: 80%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.noticia__parrafo:hover .noticia__titulo {
+    color: var(--color-hover);
+}
+
+.noticia__parrafo:hover .noticia__etiqueta {
+    background-color: var(--color-hover);
+}
+
+.noticia__titulo {
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.noticia__etiqueta {
+    background-color: var(--color-espera-azul);
+    border-radius: 3px;
+    color: var(--color-letra);
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+
+.pie {
+    background-color: var(--color-fondo1);
+    position: relative;
+    padding: 0.1px;
+    margin-top: 100px;
+}
+
+
+.pie__contenido {
+    width: 90%;
+    max-width: 1150px;
+    margin: 20px auto;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.pie__enlaces {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie__enlaces__texto{
+    font-size: 13px;
+    color: var(--color-letra-apagado);
+}
+
+.pie__enlaces__contenedor {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    background-color: var(--color-contenedores-apagado);
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+.pie__enlaces__hipervinculo{
+    color: var(--color-letra-apagado);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.pie__enlaces__hipervinculo:hover{
+    color: var(--color-letra);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+
+.pie__iconos__contenido {
+    list-style-type: none;
+    display: flex;
+    gap:30px;
+    height: 100%;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.pie__icono__item{
+    background-color: var(--color-contenedores-apagado);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.pie__icono__item:hover{
+    background-color: var(--color-contenedores);
+}
+
+

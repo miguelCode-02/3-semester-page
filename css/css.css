@@ -1,0 +1,845 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-letra);
+    background-color: #EAEAEA;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-fondo1:#2B353A;
+    --color-contenedor-saliente:rgb(59, 67, 72);
+    --color-fondo2:#fff;
+    --color-letra:#fff;
+    --color-letra-apagado:#aeb2b4;
+    --color-hover:#01BCF3;
+    --color-espera-azul:#80DDF9;
+    --color-main-naranja:#FF7E00;
+    --color-contenedores:#171a1c;
+    --color-contenedores-apagado:#171a1c7a;
+    --color-letra-encendido: #373737 ;
+    --lineal-gradient-facebook:linear-gradient(to bottom,rgba(34,133,187) 50%,
+    rgb(21, 102, 165) 0%);
+    --box-shadow: 0px 2px 25px 4px rgba(40,61,84,0.61);
+    --box-shadow-2:rgba(0, 0, 0, 0.187) 0px 0px 10px 7px;
+    --lineal-gradient-contenido:linear-gradient(0deg, rgba(2, 0, 36, 0.705) 0%, rgba(2, 0, 36, 0.149) 20%, rgba(0,212,255,0) 100%);
+    --lineal-gradient-contenido-activado:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+/*header */
+.cabezado{
+    height: 77px;
+    background-color: var(--color-fondo1);
+}
+
+/*ul */
+.cabezado__lista{
+    width: 90%;
+    max-width: 1150px;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/*todos los li*/
+.cabezado__lista__item{
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    color: var(--color-letra-apagado);
+}
+
+.cabezado__lista__item:hover{
+    color: var(--color-letra);
+}
+
+/*el li que tiene al logo / logo*/
+.cabezado__lista__item-logo{
+    width: 45%;
+}
+
+.cabezado__lista__hipervinculo{
+    display: block;
+    width: 200px;
+    height: 76px;
+    text-align: right;
+}
+
+.cabezado__lista__logo{
+    width: 150px;
+    height: 100%;
+    object-fit: contain;
+    margin-right:100% ;
+    display: block;
+}
+
+/*la seccion donde se realiza las busquedas*/
+
+.cabezado__lista__formulario{
+    width: 200px;
+    height: 40px;
+    background-color: var(--color-contenedores-apagado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    cursor: default;
+}
+
+.cabezado__lista__formulario:valid{
+    background-color: var(--color-contenedores);
+}
+
+.cabezado__lista__campo{
+    height: 40px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-letra-apagado);
+    font-weight: 500;
+}
+
+.cabezado__lista__boton{
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    color: var(--color-letra);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+
+/*el contenedor del login / login*/
+.cabezado__lista__contenedor{
+    display: flex;
+    width: 90px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-contenedores-apagado);
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cabezado__lista__contenedor:hover {
+    background-color:var(--color-contenedores);
+}
+
+.cabezado__lista__icono{
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.cabezado__lista__session{
+    font-size: .8rem;
+}
+
+/*el icono hacia facebook / hipervinculo facebook*/
+.cabezado__lista__propio{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    background-image: var(--lineal-gradient-facebook);
+    text-decoration: none;
+    color: var(--color-letra);
+}
+
+.cabezado__lista__icono-propio{
+    font-size: 1.5rem;
+}
+
+/*tamaño del cuerpo main*/
+.cuerpo__main{
+    width: 90%;
+    max-width: 1150px;
+    margin: 20px auto;
+    display: flex;
+}
+
+
+/*aside / anuncio*/
+.cuerpo__anuncio{
+    margin-bottom:25px ;
+    display: block;
+}
+
+/*emision / article*/
+.cuerpo__emision{
+    width: 300px;
+    height: 100%;
+}
+
+/*h2*/
+.cuerpo__emision__titulo{
+    text-align: left;
+    padding: 17px 20px;
+    border-bottom: 1px solid rgba(14, 14, 14, 0.356) ;
+    background-color: var(--color-fondo2);
+    color:#000000ca;
+    border-radius: 5px 5px 0 0;
+    font-size: 1rem;
+    position: relative;
+
+}
+
+/*i / icono*/
+.cuerpo__emision__icono{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-main-naranja);
+    line-height: 55px;
+}
+
+/*UL*/
+.cuerpo__emision__novedades{
+    list-style: none;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--color-fondo2);
+    
+}
+
+/*a*/
+.cuerpo__emision__anime{
+    display: block;
+    text-decoration: none;
+    color:var(--color-letra-encendido);
+    width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 70px 20px 15px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    font-weight: 200;
+}
+
+.cuerpo__emision__anime::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    content: "\f144";
+    color: var(--color-letra-apagado);
+    margin-right: 5px;
+}
+
+.cuerpo__emision__anime:hover .cuerpo__emision__forma{
+    background-color: var(--color-hover);
+    transition: background-color 0.3s linear;
+}
+
+.cuerpo__emision__anime:hover::before,.cuerpo__emision__anime:hover{
+    color: var(--color-hover);
+    transition: color 0.3s linear;
+}
+
+
+/*span / codigo por entender*/
+.cuerpo__emision__forma{
+    width: 60px;
+    text-align: center;
+    height: 17px;
+    line-height: 17px;
+    color: var(--color-letra);
+    font-size: .7rem;
+    background-color: var(--color-espera-azul);
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    bottom: 0;
+    right: 0;
+    margin: auto 10px auto 0;
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+
+/*---------------section----------*/
+
+/*principal contenedor / contiene al section */
+.cuerpo__contenido__emision__principal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+/*titulo*/
+.cuerpo__contenido__titulo{
+    color: #3b3b3b;
+    font-weight: lighter;
+    position: relative;
+    text-align: left;
+}
+
+/*span*/
+.cuerpo__contenido__dia{
+    color: var(--color-letra);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--color-hover);
+    width: 60px;
+    height: 27px;
+    line-height: 27px;
+    border-radius: 10px;
+}
+
+.cuerpo__contenido__dia::before{
+    display: block;
+    margin: 0 auto;
+    content: "";
+    width: 20px;
+    height: 10px;
+    background-color: var(--color-hover);
+    position: absolute;
+    top: 27px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+
+/*principal / section */
+.cuerpo__contenido{
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(190px, 0.5fr));
+    grid-auto-rows: 140px ;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*div padre*/
+.cuerpo__contenido__almacen{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px; 
+}
+/*div padre / afectacion a travez de hover*/
+.cuerpo__contenido__almacen:hover .cuerpo__contenido__ventana {
+    animation: animacionh2ventana 5s infinite alternate both cubic-bezier(0,.98,.58,.01);
+}
+
+.cuerpo__contenido__almacen:hover .cuerpo__contenido__anime__titulo {
+    pointer-events: none;
+    background-image: var(--lineal-gradient-contenido-activado);
+}
+
+.cuerpo__contenido__almacen:hover .cuerpo__contenido__imagen {
+    transform: scale(1.5);
+    transition: 0.5s;
+    position: relative;
+    z-index: -1;
+}
+
+.cuerpo__contenido__almacen:hover .cuerpo__contenido__anime__titulo::before {
+    transform: translateX(100px);
+    transition: 1s;
+}
+
+
+/*div que se coloca al frente de la ventana*/
+.cuerpo__contenido__anime__titulo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: var(--lineal-gradient-contenido);
+}
+
+.cuerpo__contenido__anime__titulo::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    font-size: 1.5rem;
+    content: "\f144";
+    color: var(--color-letra);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+}
+
+/*barra naraja de los episodios*/
+.cuerpo__contenido__barra{
+    text-align: center;
+    background-color: var(--color-main-naranja);
+    display: block;
+    width: 60px;
+    height: 17px;
+    line-height: 17px;
+    font-weight: 500;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    margin: 87px 0 3px 10px;
+}
+
+/*h2 del titulo*/
+.cuerpo__contenido__ventana{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+@keyframes animacionh2ventana {
+
+    from{
+        transform: translate(-120%);
+    }
+
+    to{
+        transform: translateX(120%);
+    }
+}
+
+
+/*a / hipervinculo*/
+.cuerpo__contenido__hipervinculo{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/*imagen*/
+.cuerpo__contenido__imagen{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*iframe contenedor del video y texto*/
+.cuerpo__contenido__iframe{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #191919e0;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.cuerpo__contenido__iframe:target{
+    transform: scale(1);
+    opacity: 1;
+    transition: opacity 0.2s;
+    z-index: 1;
+}
+
+/*boton cerrar*/
+.cuerpo__contenido__boton{
+    width: 40px;
+    background-color: red;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-right: 5px ;
+}
+
+/*div texto*/
+.cuerpo__contenido__texto{
+    width: 500px;
+    height: 390px;
+    position: relative;
+    background-color: var(--color-fondo1);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/*titulo a dentro */
+.cuerpo__contenido__titulo-video{
+    color: var(--color-letra);
+    margin-bottom: 10px;
+}
+
+/*p*/
+.cuerpo__contenido__adentro{
+    font-weight: 500;
+    width: 80%;
+    height: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/*fondo creado con la p del texto */
+
+.cuerpo__contenido__texto::before{
+    content: "";
+    display: block;
+    width: 900px;
+    height: 450px;
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    background-color: #171a1c;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+
+/*video */
+.cuerpo__contenido__video{
+    width: 500px;
+    height: 281px;
+    position: relative;
+    top: 0;
+    left: -100px ;
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+}
+
+
+
+/*---------------section2----------*/
+
+/*padding para la estrella / h2*/
+.cuerpo__contenido__titulo-padding{
+    padding-left: 50px;
+    margin-top:30px;
+}
+
+/* estrella / span */
+.cuerpo__contenido__estrella{
+    position: absolute;
+    left: 3px;
+    top: -5px;
+    color: #828384a6;
+    background-image: linear-gradient(rgb(255, 186, 0) 0%, rgb(255, 128, 0) 100%);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.cuerpo__contenido__estrella::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    --color-main-naranja:rgb(255,182,38);
+    background-color: var(--color-main-naranja);
+    z-index: -1;
+}
+
+
+/*UL*/
+.cuerpo__contenido__lista{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, 190px) ;
+    grid-auto-rows: 400px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+    list-style: none;
+
+}
+
+/*soga de estreno / span*/
+.cuerpo__contenido__liston{
+    transform: rotate(-45deg) translate(-1px,4px);
+    position: absolute;
+    z-index: 1;
+    left: -25px;
+    top: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #01ae43;
+    line-height: 25px;
+    clip-path: polygon(24.52% -4.53%, 73.21% -6.79%, 100% 100%, -2.26% 103.4%);
+    border-radius: 100cm 100cm 0 0;
+    pointer-events: none;
+}
+
+
+/*LI*/
+.cuerpo__contenido__item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+/*link para la imagen / a */
+.cuerpo__contenido__hipervinculo-section2{
+    width: 100%;
+    height: 302px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 5px solid var(--color-fondo2);
+    position: relative; 
+    text-align: center
+}
+
+.cuerpo__contenido__hipervinculo-section2:hover{
+    box-shadow: var(--box-shadow-2);
+    transition: 0.5s;
+}
+
+.cuerpo__contenido__hipervinculo-section2:hover::before{
+    opacity: 1;
+    background-color: #01bbf45b;
+}
+
+.cuerpo__contenido__hipervinculo-section2::before{
+    color: var(--color-letra);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    content: "\f144";
+    position: absolute;
+    font-size: 5rem;
+    line-height: 302px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s, background-color 0.5s linear;
+}
+
+.cuerpo__contenido__hipervinculo-section2:hover::after{
+    background-color: var(--color-hover);
+}
+
+.cuerpo__contenido__hipervinculo-section2::after{
+    color: var(--color-letra);
+    font-weight: 900;
+    content: "ANIME";
+    position: absolute;
+    font-size: 0.7rem;
+    background-color: var(--color-espera-azul);
+    padding: 2px 18px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 40px;
+    transition: background-color .5s;
+}
+
+.cuerpo__contenido__hipervinculo-section2:hover ~ .cuerpo__contenido__titulo-abajo{
+    color: var(--color-hover);
+}
+
+/*imagen / img*/
+.cuerpo__contenido__imagen-section2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*titulo que sale abajo / h2*/
+.cuerpo__contenido__titulo-abajo{
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+    transition: color 0.5s;
+}
+
+/*contenedor que sale al pasar / div*/
+.cuerpo__contenido__anime-section2{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 300px;
+    height: 270px;
+    background-color: var(--color-contenedor-saliente);
+    border-radius: 10px;
+    padding: 20px 15px;
+    transform: scale(0);
+    z-index: 1;
+    opacity: 0;
+}
+
+.cuerpo__contenido__item:hover .cuerpo__contenido__anime-section2{
+    transform: scale(1) translate(-180px, -100px);
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.261) 0px 0px 10px 7px;;
+    transition: 0.5s;
+}
+
+/*titulo que sale adentro / h2*/
+.cuerpo__contenido__titulo-color{
+    color: var(--color-letra);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/*etiqueta de lado izquierdo / span*/
+.cuerpo__contenido__etiqueta{
+    margin-bottom: 20px;
+    margin-right: 80px;
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    text-align: center;
+    border-radius: 40px;
+    color: var(--color-letra);
+    background-color: var(--color-hover);
+}
+
+/*estrella de lado derecho / icono / span*/
+.cuerpo__contenido__calificacion-estrella{
+    color: goldenrod;
+    font-size: 1.7rem;
+    position: relative;
+    top: 1px;
+}
+/*calificacion derecha / span*/
+.cuerpo__contenido__calificacion{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/*parrafo adentro / p*/
+.cuerpo__contenido__parrafo{
+    font-size: .8rem;
+    font-weight: 500;
+    text-justify: auto;
+}
+
+/*boton que esta adentro / a*/
+.cuerpo__contenido__boton-adentro{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    width:120px;
+    height: 30px;
+    background-color: var(--color-hover);
+    border-radius: 20px;
+    color: var(--color-letra);
+    line-height: 30px;
+    margin: 15px 0 0 auto  ;
+    font-weight: 600;
+    font-size: 16px;
+    transform: scale(1);
+}
+
+.cuerpo__contenido__boton-adentro:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.pie {
+    background-color: var(--color-fondo1);
+    position: relative;
+    padding: 0.1px;
+}
+
+
+.pie__contenido {
+    width: 90%;
+    max-width: 1150px;
+    margin: 20px auto;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.pie__enlaces {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie__enlaces__texto{
+    font-size: 13px;
+    color: var(--color-letra-apagado);
+}
+
+.pie__enlaces__contenedor {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    background-color: var(--color-contenedores-apagado);
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+.pie__enlaces__hipervinculo{
+    color: var(--color-letra-apagado);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.pie__enlaces__hipervinculo:hover{
+    color: var(--color-letra);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+
+.pie__iconos__contenido {
+    list-style-type: none;
+    display: flex;
+    gap:30px;
+    height: 100%;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.pie__icono__item{
+    background-color: var(--color-contenedores-apagado);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.pie__icono__item:hover{
+    background-color: var(--color-contenedores);
+}
